@@ -8,11 +8,20 @@ body{
     background-color: rgb(0, 0, 0);
 }
 
-nav ul li, nav ol li{
-    float: left;
+header{
+    height: 100px;
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    line-height: 100px;
+    color: rgb(255, 255, 255);
+}
+
+nav ul li{
+    float: right;
     list-style: none;
-    margin: 10px;
-    display: block
+    margin: 40px;
+    background-color: rgb(22, 29, 126);
 
 }
 
@@ -24,11 +33,14 @@ nav ul li, nav ol li{
     margin-top: 50px;
 }
 
+aside {
+    background-color: #388050;
+    grid-area: aside;
+}
 
 footer {
-    overflow-y: auto;
-    background-color: #989898;
-    grid-area: footer;
-
-  }
-
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+}
