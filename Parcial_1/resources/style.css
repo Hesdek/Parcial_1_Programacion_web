@@ -1,8 +1,9 @@
 body{
     font-size: 16px;
-    background: rgb(235, 192, 195);
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("/resources/pexels-kovyrina-937980.jpg");
+    background-size: cover;
+
 
 }
 ::selection {
@@ -16,28 +17,34 @@ header{
     margin: 0px;
     text-align: center;
     line-height: 100px;
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.651);
+    text-shadow: 5px -5px 5px rgba(255, 255, 255, 0.651);;
+}
+
+nav{
+    background-color: #6600aa;
+    padding: 25px;
+    margin-top: 20px;
 }
 
 nav ul li{
     float: right;
     list-style: none;
-    margin: 40px;
-    background-color: rgb(22, 29, 126);
-
-}
-
-#content {
-    clear: both;
+    margin: 20px;
+    color: rgb(255, 255, 255);
 }
 
 .article {
     margin-top: 50px;
 }
 
-aside {
-    background-color: #388050;
-    grid-area: aside;
+.sub_header{
+    text-align: center;
+    color:#fc9b1d
+}
+
+h3 {
+    color: rgb(255, 72, 0);
 }
 
 footer {
@@ -53,13 +60,6 @@ footer {
     align-items: center;
 }
 
-.card {
-    width: 200px;
-    height: 150px;
-    background-color: #f0f0f0;
-    margin: 10px;
-}
-
 .centrar {
     display: flex;
     justify-content: center;
@@ -73,8 +73,31 @@ footer {
 }
 
 .html_content {
-    background: white;
-    border-top: 5px solid #62dada;
+    background: rgb(255, 149, 237, 0.5);
+    border-top: 5px solid #ff1515;
+    color: #ffffff;
+}
+
+.css_content {
+    margin-top: 10px;
+    background: rgb(32, 169, 187, 0.5);
+    border-top: 5px solid #fc9b1d;
+    border-bottom: 5px solid #ffffff;
+    color: #ffffff;
+}
+
+.tcp_ip_content {
+    background: rgb(184, 54, 54, 0.5);
+    border-top: 5px solid #0aa5ff;
+    border-bottom: 5px solid #ffffff;
+    color: #ffffff;
+}
+
+.dns_content {
+    background: rgb(255, 247, 247, 0.5);
+    border-top: 5px solid #ff1c1c;
+    border-bottom: 5px solid #ffffff;
+    color: #ffffff;
 }
 
 .text {
@@ -86,3 +109,15 @@ footer {
     padding-right: 0;
     padding-left: 80%;
 }
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+
