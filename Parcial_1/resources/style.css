@@ -45,14 +45,6 @@ nav ul li a{
 nav ul li a:hover {
     color: #ccc;
 }
-.article {
-    margin-top: 50px;
-}
-
-.sub_header{
-    text-align: center;
-    color:#fc9b1d
-}
 
 h2 {
     color: rgba(255, 127, 127, 0.856); 

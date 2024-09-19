@@ -17,10 +17,34 @@ header{
     margin: 0px;
     text-align: center;
     line-height: 100px;
-    color: rgba(255, 255, 255, 0.651);
-    text-shadow: 5px -5px 5px rgba(255, 255, 255, 0.651);;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 5px -5px 5px rgba(255, 255, 255, 0.7);;
 }
 
+nav{
+    background-color: #194579;
+    padding: 25px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+}
+
+nav ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+nav ul li a{
+    float: right;
+    list-style: none;
+    padding: 10px;
+    color: rgb(194, 128, 67);
+}
+
+
+nav ul li a:hover {
+    color: #ccc;
+}
 h2 {
     color: rgba(255, 127, 127, 0.856); 
     font-size:medium;
@@ -32,6 +56,24 @@ h3 {
     color: rgb(255, 72, 0);
 }
 
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .css_content {
     margin-top: 10px;
     background: rgb(32, 169, 187, 0.5);
@@ -41,9 +83,35 @@ h3 {
 
 }
 
+.logocontent {
+    padding-right: 0;
+    padding-left: 80%;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    padding: 10px;
+    margin: 30 10px;
+}
+
+
 footer {
     text-align: center;
     padding: 20px;
     background: rgba(0, 0, 0, 0.7);
     color: white;
 }
+
