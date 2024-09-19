@@ -3,9 +3,8 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("/resources//img/pexels-kovyrina-937980.jpg");
     background-repeat: repeat;
-    background-size: calc(100% / 3);
-    background-position: center;
-
+    background-size: 33.33% 100%;
+    background-position: top left, top center, top right;
 }
 ::selection {
     color: rgb(250, 5, 21);
@@ -20,7 +19,7 @@ header{
     text-align: center;
     line-height: 100px;
     color: rgba(255, 255, 255, 0.651);
-    text-shadow: 5px -5px 5px rgba(255, 255, 255, 0.651);;
+    text-shadow: 4px -4px 4px rgba(255, 255, 255, 0.6);;
 }
 
 nav{
@@ -61,6 +60,7 @@ h3 {
 }
 
 footer {
+    font-size: 15px;
     text-align: center;
     padding: 20px;
     background: rgba(0, 0, 0, 0.7);
@@ -86,39 +86,27 @@ footer {
 }
 
 .html_content {
-    margin-top: 10px;
     background: rgba(218, 125, 255, 0.5);
     border-top: 5px solid #ff158a;
     color: #ffffff;
-    box-shadow: 5px 5px 5px 5px rgba(255, 255, 255, 0.8);
-
 }
 
 .css_content {
-    margin-top: 10px;
     background: rgb(32, 169, 187, 0.5);
     border-top: 5px solid #fc9b1d;
     color: #ffffff;
-    box-shadow: 5px 5px 5px 5px rgba(255, 255, 255, 0.8);;
-
 }
 
 .tcp_ip_content {
-    margin-top: 10px;
     background: rgb(184, 54, 54, 0.5);
     border-top: 5px solid #0aa5ff;
     color: #ffffff;
-    box-shadow: 5px 5px 5px 5px rgba(255, 255, 255, 0.8);;
-
 }
 
 .dns_content {
-    margin-top: 10px;
     background: rgb(255, 247, 247, 0.5);
     border-top: 5px solid #ff1c1c;
     color: #ffffff;
-    box-shadow: 5px 5px 5px 5px rgba(255, 255, 255, 0.8);;
-
 }
 
 
@@ -128,8 +116,8 @@ footer {
     margin: 0 10px;
     text-align: left;
     box-sizing: border-box;
-    border-radius: 10px;
-    box-shadow: 10px -10px 10px rgba(255, 255, 255, 0.8);;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px 4px rgba(255, 255, 255, 0.8);
 }
 
 .css_content, .html_content {
@@ -138,8 +126,8 @@ footer {
     box-sizing: border-box;
     padding: 10px;
     margin: 0 10px;
-    border-radius: 10px;
-    box-shadow: 10px -10px 10px rgba(255, 255, 255, 0.8);;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px 4px rgba(255, 255, 255, 0.8);
 }
 
 
@@ -150,12 +138,12 @@ footer {
 
 .logocontent {
     padding-right: 0;
-    padding-left: 80%;
+    padding-left: 85%;
 }
 
 .logo {
-    width: 70px;
-    height: 70px;
+    width: 58px;
+    height: 65px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -169,7 +157,6 @@ footer {
     align-items: center;
     width: 36%;
     padding: 10px;
-    margin: 25 15px;
+    margin: 25 20px;
 }
-
 
