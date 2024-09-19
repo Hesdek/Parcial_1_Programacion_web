@@ -1,5 +1,5 @@
 body{
-    font-size: 16px;
+    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("/resources//img/pexels-kovyrina-937980.jpg");
     background-size: cover;
@@ -53,6 +53,7 @@ h2 {
 }
 
 h3 {
+    font-size: 25px;
     color: rgb(255, 72, 0);
 }
 
@@ -75,6 +76,7 @@ h3 {
 }
 
 .html_content {
+    margin-top: 10px;
     background: rgb(255, 149, 237, 0.5);
     border-top: 5px solid #ff1515;
     color: #ffffff;
@@ -101,7 +103,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 90%;
     padding: 10px;
     margin: 30 10px;
 }
