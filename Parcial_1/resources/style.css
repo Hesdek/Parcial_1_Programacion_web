@@ -22,18 +22,29 @@ header{
 }
 
 nav{
-    background-color: #6600aa;
+    background-color: #194579;
     padding: 25px;
     margin-top: 20px;
+    margin-bottom: 30px;
+
 }
 
-nav ul li{
+nav ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+nav ul li a{
     float: right;
     list-style: none;
-    margin: 20px;
-    color: rgb(255, 255, 255);
+    padding: 10px;
+    color: rgb(194, 128, 67);
 }
 
+
+nav ul li a:hover {
+    color: #ccc;
+}
 .article {
     margin-top: 50px;
 }
@@ -83,6 +94,8 @@ footer {
     background: rgb(255, 149, 237, 0.5);
     border-top: 5px solid #ff1515;
     color: #ffffff;
+    box-shadow: 15px 15px 15px 15px rgba(255, 255, 255, 0.651);;
+
 }
 
 .css_content {
@@ -90,7 +103,7 @@ footer {
     background: rgb(32, 169, 187, 0.5);
     border-top: 5px solid #fc9b1d;
     color: #ffffff;
-    box-shadow: 15px -15px 15px rgba(255, 255, 255, 0.651);;
+    box-shadow: 15px -15px -15px -15px rgba(255, 255, 255, 0.651);;
 
 }
 
@@ -105,7 +118,6 @@ footer {
 .dns_content {
     background: rgb(255, 247, 247, 0.5);
     border-top: 5px solid #ff1c1c;
-    border-bottom: 5px solid #ffffff;
     color: #ffffff;
     box-shadow: 10px -10px 10px rgba(255, 255, 255, 0.8);;
 
@@ -144,8 +156,8 @@ footer {
 }
 
 .logo {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -159,7 +171,7 @@ footer {
     align-items: center;
     width: 33%;
     padding: 10px;
-    margin: 0 10px;
+    margin: 30 10px;
 }
 
 
