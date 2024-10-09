@@ -1,0 +1,9 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#element-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}

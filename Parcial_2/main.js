@@ -10,9 +10,14 @@ async function getData(endpoint){
 
 (async() => {
     try{
-        const datos = await getData('https://bbd7-2800-e2-2780-2479-2417-fe6c-d24e-ecb3.ngrok-free.app/users');
-    
+        const datos = await getData('https://reqres.in/api/users?page=2');
+        const data = datos.data;
+        const main = document.querySelector("main");
+        const contenedor = document.createElement("div");
+        contenedor.setAttribute("class", "container");
+
+        main.appendChild(contenedor);
     }catch(error){
         console.error(`fallo al obtener los datos: ${error}`);
     }
-    })();
+})();
