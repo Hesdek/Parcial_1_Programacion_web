@@ -1,36 +1,41 @@
 <!DOCTYPE html>
-<html lang = "es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name = "author" content = "Daniel Perez Gallego">
-        <meta name = "description" content = "Parcial 2">
-        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-        <title> Parcial 2</title>
-        <link rel= "stylesheet" href = "resources/styles.css"/>
-        <link rel = "icon" href= ""/>
-        <script src="main.js" defer></script>
-    <head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Daniel Perez Gallego" />
+    <meta name="description" content="Parcial 2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parcial 2</title>
+    <link rel="stylesheet" href="resources/styles.css" />
+    <link rel="icon" href="" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js" defer></script>
 
-        <section id="element-list"></section>
-
-        <section>
-            <h2>Crear o Modificar Elemento</h2>
-            <form id="element-form">
-                <input type="hidden" id="element-id" />
-                <label for="first-name">Nombre:</label>
-                <input type="text" id="first-name" required>
-                <label for="last-name">Apellido:</label>
-                <input type="text" id="last-name" required>
-                <label for="phone">Teléfono:</label>
-                <input type="tel" id="phone" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-                <label for="job-title">Puesto de trabajo:</label>
-                <input type="text" id="job-title" required>
-                <button type="submit">Guardar</button>
-            </form>
-        </section>
+</head>
 
 
-<html>
-        
+<body>
+    <h1>Lista de Usuarios</h1>
+    <!-- Contenedor para los usuarios listados -->
+    <section id="user-list"></section>
+
+    <!-- Formulario para crear o modificar un usuario -->
+    <section>
+        <h2>Crear o Modificar Usuario</h2>
+        <form id="user-form" onsubmit="event.preventDefault(); saveUser();">
+            <input type="hidden" id="user-id" />
+            <label for="first-name">Nombre:</label>
+            <input type="text" id="first-name" required />
+            <label for="last-name">Apellido:</label>
+            <input type="text" id="last-name" required />
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" required />
+            <label for="job-title">Puesto de trabajo:</label>
+            <input type="text" id="job-title" required />
+            <button type="submit">Guardar</button>
+        </form>
+    </section>
+</body>
+</html>
