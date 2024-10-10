@@ -16,10 +16,8 @@ async function saveUser() {
     };
 
     if (userId) {
-        // Modificar el usuario
         await updateUser(endpoint, userId, userData);
     } else {
-        // Crear un nuevo usuario
         await createUser(endpoint, userData);
     }
 
