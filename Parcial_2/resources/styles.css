@@ -1,13 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-}
-
-#element-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
+/* Estilos para la tarjeta de usuario */
 .user {
     border: 1px solid #ccc;
     padding: 10px;
@@ -16,11 +7,70 @@ body {
     display: inline-block;
     width: 200px;
     text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
 }
 
+.user:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para la imagen del usuario */
 .user img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
+}
+
+/* Estilo para el botón de editar */
+.user button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para el formulario */
+#element-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#element-form input, #element-form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#element-form button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#element-form button:hover {
+    background-color: #007bb5;
+}
+
+/* Estilo para los encabezados */
+h1, h2 {
+    color: #333;
+    text-align: center;
 }

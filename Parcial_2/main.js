@@ -1,3 +1,4 @@
+// Función para obtener datos de la API (GET)
 async function getData(endpoint) {
     try {
         const response = await axios.get(endpoint);
@@ -66,7 +67,7 @@ function fillForm(userId) {
 
 // Guardar un nuevo usuario o modificar uno existente
 async function saveUser() {
-    const endpoint = 'https://bbd7-2800-e2-2780-2479-2417-fe6c-d24e-ecb3.ngrok-free.app/users';
+    const endpoint = 'http://ec2-3-138-183-128.us-east-2.compute.amazonaws.com:4010/users';
     const userId = document.getElementById('user-id').value;
     const userData = {
         firstName: document.getElementById('first-name').value,
@@ -90,7 +91,7 @@ async function saveUser() {
 
 // Llamada a la API y renderizado en el DOM
 async function loadUsers() {
-    const endpoint = 'https://bbd7-2800-e2-2780-2479-2417-fe6c-d24e-ecb3.ngrok-free.app/users';
+    const endpoint = 'http://ec2-3-138-183-128.us-east-2.compute.amazonaws.com:4010/users';
     const users = await getData(endpoint);
     localStorage.setItem('users', JSON.stringify(users)); // Almacenar los usuarios localmente
     renderUsers(users);
@@ -99,3 +100,8 @@ async function loadUsers() {
 // Ejecutar la función para cargar los usuarios al cargar la página
 window.onload = loadUsers;
 
+// Manejar el evento de envío del formulario
+document.getElementById('element-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    await saveUser();
+});

@@ -10,19 +10,14 @@
     <link rel="icon" href="" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="main.js" defer></script>
-
 </head>
-
-
 <body>
     <h1>Lista de Usuarios</h1>
-    <!-- Contenedor para los usuarios listados -->
-    <section id="user-list"></section>
+    <div id="user-list"></div>
 
-    <!-- Formulario para crear o modificar un usuario -->
     <section>
         <h2>Crear o Modificar Usuario</h2>
-        <form id="user-form" onsubmit="event.preventDefault(); saveUser();">
+        <form id="element-form">
             <input type="hidden" id="user-id" />
             <label for="first-name">Nombre:</label>
             <input type="text" id="first-name" required />
@@ -37,5 +32,6 @@
             <button type="submit">Guardar</button>
         </form>
     </section>
+
 </body>
 </html>
