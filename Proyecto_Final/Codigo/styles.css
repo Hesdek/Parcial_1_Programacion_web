@@ -58,3 +58,43 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+
+/* Estilos del calendario */
+.calendar {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.calendar__info {
+    padding: 10px;
+    background-color: #008080;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.calendar__week, .calendar__dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.calendar__day, .calendar__date {
+    padding: 10px;
+    border: 1px solid #eee;
+}
+
+.calendar__today {
+    background-color: #008080;
+    color: white;
+}
+
+.calendar__last-days {
+    color: #ccc;
+}

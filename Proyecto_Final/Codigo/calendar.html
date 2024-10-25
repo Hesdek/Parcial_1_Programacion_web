@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Eventos Culturales de Medellín</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Guía de Eventos Culturales de Medellín</h1>
+        <p>Descubre los eventos más importantes de Medellín</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="#">Eventos</a>
+        <a href="calendar.html">Calendario</a>
+    </nav>
+
+    <section>
+        <h2>Calendario de Eventos</h2>
+        <div class="calendar">
+            <div class="calendar__info">
+                <div class="calendar__prev" id="prev-month">&#9664;</div> 
+                <div class="calendar__month" id="month"></div>
+                <div class="calendar__year" id="year"></div>
+                <div class="calendar__next" id="next-month">&#9654;</div>
+            </div>
+
+            <div class="calendar__week">
+                <div class="calendar__day calendar__item">Lun</div>
+                <div class="calendar__day calendar__item">Mar</div>
+                <div class="calendar__day calendar__item">Mié</div>
+                <div class="calendar__day calendar__item">Jue</div>
+                <div class="calendar__day calendar__item">Vie</div>
+                <div class="calendar__day calendar__item">Sáb</div>
+                <div class="calendar__day calendar__item">Dom</div>
+            </div>
+
+            <div class="calendar__dates" id="dates"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Guía de Eventos Culturales de Medellín | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="calendar.js"></script>
+</body>
+</html>
