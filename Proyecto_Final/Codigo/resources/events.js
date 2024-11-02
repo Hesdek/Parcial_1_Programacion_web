@@ -13,3 +13,12 @@ function initMap() {
     });
 }
 
+function toggleInfo() {
+    const extraInfo = document.getElementById("extraInfo");
+    if (extraInfo.style.display === "none") {
+        extraInfo.style.display = "block";
+        initMap(); // Inicializa el mapa al hacer clic en "CONOCE MÁS"
+    } else {
+        extraInfo.style.display = "none";
+    }
+}
