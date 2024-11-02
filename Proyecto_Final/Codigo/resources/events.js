@@ -1,32 +1,15 @@
-const events = [
-    {
-        title: "Feria de las Flores",
-        description: "La Feria de las Flores es el evento más representativo de Medellín...",
-        image: "feria_flores.jpg"
-    },
-    {
-        title: "Alumbrados de Navidad",
-        description: "Los alumbrados navideños en Medellín son conocidos mundialmente...",
-        image: "navidad_medellin.jpg"
-    },
-    {
-        title: "Festival Internacional de Poesía",
-        description: "Cada julio, el Festival Internacional de Poesía de Medellín reúne...",
-        image: "festival_poesia.jpg"
-    }
-];
+function initMap() {
+    const medellin = { lat: 6.2442, lng: -75.5812 };
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: medellin,
+    });
 
-const eventContainer = document.querySelector('.event-container');
+    // Agregar un marcador en Medellín
+    const marker = new google.maps.Marker({
+        position: medellin,
+        map: map,
+        title: "Medellín, Colombia",
+    });
+}
 
-events.forEach(event => {
-    const eventCard = document.createElement('div');
-    eventCard.classList.add('event-card');
-
-    eventCard.innerHTML = `
-        <img src="${event.image}" alt="${event.title}" class="event-image">
-        <h2>${event.title}</h2>
-        <p>${event.description}</p>
-    `;
-
-    eventContainer.appendChild(eventCard);
-});
