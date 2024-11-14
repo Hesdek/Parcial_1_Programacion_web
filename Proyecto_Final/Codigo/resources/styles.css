@@ -1,18 +1,22 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    text-align: justify;
 }
 
 header {
-    background-color: #008080;
+    background-image: url('/Codigo/resources/img/Header.webp');
+    background-size:cover;
     font-size: 30px;
-    position: inherit;
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+.logo {
+    display: flex;
+    height: 150px;
 }
 
 nav {
@@ -33,12 +37,17 @@ nav a:hover {
 }
 
 section {
-    padding: 20px;
+    border: 20px;
     margin: 10px;
 }
 
+.info-med {
+    padding: 60px;
+    margin: 20px;
+}
+
 h1, h2 {
-    font-size: 25px;
+    font-size: 40px;
     color: #008080;
 }
 
