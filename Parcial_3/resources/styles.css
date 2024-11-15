@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: justify;
+}
+
+header {
+    background-image: url('/resources/img/Header.webp');
+    background-size:cover;
+    font-size: 30px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    height: 150px;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+h1 {
+    font-size: 40px;
+    color: #008080;
+}
+
+footer {
+    font-size: small;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
