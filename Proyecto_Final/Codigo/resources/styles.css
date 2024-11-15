@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-image: url('/Codigo/resources/img/Header.webp');
+    background-image: url('/resources/img/Header.webp');
     background-size:cover;
     font-size: 30px;
     color: white;
