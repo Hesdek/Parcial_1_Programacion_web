@@ -1,6 +1,6 @@
 import express from 'express';
 import { getDoctorById, getAppointmentsByDoctor } from '../controllers/DoctorController.js';
-import { authenticate } from '../middlewares/authMiddleware.js';
+import { authenticate } from '../middlewares/middleware.js';
 
 const router = express.Router();
 

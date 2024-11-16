@@ -1,6 +1,6 @@
 import express from 'express';
-import patientRoutes from './routes/patientRoutes.js';
-import doctorRoutes from './routes/doctorRoutes.js';
+import patientRoutes from './routes/PatientRoutes.js';
+import doctorRoutes from './routes/DoctorRoutes.js';
 import appointmentRoutes from './routes/AppointmentRoutes.js';
 
 const app = express();
