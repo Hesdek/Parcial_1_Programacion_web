@@ -1,36 +1,30 @@
-version: '3.8'
-
 services:
   db:
-    image: postgres:13
+    image: postgres:latest
     environment:
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_DB=${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
     ports:
-      - "${POSTGRES_PORT}:5432"
+      - "5432:5432"
     volumes:
       - db-data:/var/lib/postgresql/data
     env_file:
-      - ./datasabe/.env
-
+      - ./database/.env  # Asegúrate de que apunte al archivo .env de la base de datos
 
   api:
-    build: .
-    container_name: parcial_api
-    environment:
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_DB=${POSTGRES_DB}
-      - POSTGRES_HOST=${POSTGRES_HOST}
-      - POSTGRES_PORT=${POSTGRES_PORT}
-      - JWT_SECRET=${JWT_SECRET}
+    build: ./api
     ports:
       - "3000:3000"
-    depends_on:
-      - db
-      - ./api/.env
-
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_DATABASE: ${DB_DATABASE}
+      DB_HOST: ${DB_HOST}
+      JWT_SECRET: ${JWT_SECRET}
+    env_file:
+      - ./api/.env  # Asegúrate de que apunte al archivo .env dentro de la carpeta api
 
 volumes:
   db-data:
+
