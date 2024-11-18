@@ -1,24 +1,31 @@
-function initMap() {
-    const medellin = { lat: 6.2442, lng: -75.5812 };
-    const map = new google.maps.Map(document.getElementById("map"), {
+const locations = {
+    medellin: { lat: 6.2442, lng: -75.5812, title: "Medellín, Colombia" },
+    bogota: { lat: 4.7110, lng: -74.0721, title: "Bogotá, Colombia" },
+    barranquilla: { lat: 10.9685, lng: -74.7813, title: "Barranquilla, Colombia" }
+};
+
+// Función para inicializar un mapa específico
+function initMap(mapId, locationKey) {
+    const location = locations[locationKey];
+    const map = new google.maps.Map(document.getElementById(mapId), {
         zoom: 12,
-        center: medellin,
+        center: location,
     });
 
-    // Agregar un marcador en Medellín
-    const marker = new google.maps.Marker({
-        position: medellin,
+    new google.maps.Marker({
+        position: location,
         map: map,
-        title: "Medellín, Colombia",
+        title: location.title,
     });
 }
 
-function toggleInfo() {
-    const extraInfo = document.getElementById("extraInfo");
-    if (extraInfo.style.display === "none") {
-        extraInfo.style.display = "block";
-        initMap(); // Inicializa el mapa al hacer clic en "CONOCE MÁS"
+// Función para mostrar y cargar un mapa
+function toggleInfo(mapId, locationKey) {
+    const mapContainer = document.getElementById(mapId);
+    if (mapContainer.style.display === "none") {
+        mapContainer.style.display = "block";
+        initMap(mapId, locationKey);
     } else {
-        extraInfo.style.display = "none";
+        mapContainer.style.display = "none";
     }
 }

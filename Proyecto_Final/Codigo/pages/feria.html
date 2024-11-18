@@ -8,8 +8,6 @@
     <link rel = "icon" href= "/resources/img/logoA.png"/>
 </head>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY_GOOGLE_MAPS&callback=initMap"></script>
-
 <body>
     <header>
         <h1>Guía de Eventos Culturales de Medellín</h1>
@@ -25,8 +23,15 @@
     <h2>Feria de las Flores 2024 en Medellín</h2>
     <p>La Feria de las Flores es uno de los eventos más importantes de Medellín, una celebración de la cultura, la música, y sobre todo, de las flores. Del 2 al 11 de agosto de 2024, Medellín se llena de color y vida con eventos para toda la familia.</p>
 
-    <button onclick="toggleInfo()">Mostrar Mapa</button>
+    <section class="map-container">
+        <button onclick="toggleInfo('map1', 'medellin')">Mostrar Mapa de Medellín</button>
+        <button onclick="toggleInfo('map2', 'bogota')">Mostrar Mapa de Bogotá</button>
+        <button onclick="toggleInfo('map3', 'barranquilla')">Mostrar Mapa de Barranquilla</button>
 
+        <div id="map1" class="map" style="display: none;"></div>
+        <div id="map2" class="map" style="display: none;"></div>
+        <div id="map3" class="map" style="display: none;"></div>
+    </section>
     <div id="extraInfo" style="display: none;">
         <h3>Fechas de la Feria de las Flores 2024</h3>
         <p>Del 3 al 12 de agosto de 2024.</p>
@@ -67,5 +72,7 @@
     </footer>
 
     <script src="/resources/events.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY_GOOGLE_MAPS&callback=initMap"></script>
+
 </body>
 </html>
