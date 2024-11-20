@@ -1,11 +1,11 @@
-const express = require('express');
-const { Pool } = require('pg');
-const dotenv = require('dotenv');
+import express from 'express';
+import { Pool } from 'pg';
+import dotenv from 'dotenv';
 
 dotenv.config(); // Cargar las variables de entorno
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Configuración de la conexión a PostgreSQL
 const pool = new Pool({
@@ -16,24 +16,35 @@ const pool = new Pool({
   database: process.env.DB_NAME,
 });
 
-
+// Middleware para json
+app.use(express.json());
 app.use(express.static('Codigo'));
 
+// Validar configuración
+if (!process.env.DB_HOST || !process.env.DB_PORT || !process.env.DB_USER || !process.env.DB_PASSWORD || !process.env.DB_NAME) {
+  console.error('Error: Missing required environment variables');
+  process.exit(1);
+}
 
 // Ruta para obtener la clave API
 app.get('/api-key', (req, res) => {
-  // Puedes hacer una verificación de seguridad antes de enviar la clave API
   res.json({ apiKey: process.env.API_KEY });
 });
 
 // Ruta para obtener datos desde PostgreSQL
-app.get('/data', async (req, res) => {
+app.get('/data', async (req, res, next) => {
   try {
     const result = await pool.query('SELECT * FROM your_table'); // Reemplaza con tu tabla
     res.json(result.rows);
   } catch (error) {
-    res.status(500).send(error.message);
+    next(error); // Pasar el error al middleware global
   }
+});
+
+// Middleware global para manejo de errores
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: 'Internal Server Error' });
 });
 
 // Iniciar el servidor

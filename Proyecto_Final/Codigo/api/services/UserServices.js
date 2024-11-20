@@ -2,7 +2,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import pool from '../models/db.js';
 
-class UserService {
+class UserServices {
   static async login(names, passwords) {
     const query = 'SELECT * FROM Users WHERE names = $1';
     const { rows } = await pool.query(query, [names]);
@@ -24,4 +24,4 @@ class UserService {
   }
 }
 
-export default UserService;
+export default UserServices;
