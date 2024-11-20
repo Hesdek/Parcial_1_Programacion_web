@@ -8,7 +8,7 @@ const locations = {
 function initMap(mapId, locationKey) {
     const location = locations[locationKey];
     const map = new google.maps.Map(document.getElementById(mapId), {
-        zoom: 12,
+        zoom: 10,
         center: location,
     });
 

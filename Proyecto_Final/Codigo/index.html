@@ -102,8 +102,14 @@
         </p>
     </section>
 
+    <section class="map-container">
+        <button onclick="toggleInfo('map1', 'medellin')">Mostrar Mapa de Medellín</button>
+        <div id="map1" class="map" style="display: none;"></div>
+    </section>
+
   </head>
-    <script type="module" src="./index.js"></script>
+    <script src="/resources/events.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"></script>
 
     <footer>
         <p>&copy; 2024 Guía de Eventos Culturales de Medellín | Todos los derechos reservados</p>

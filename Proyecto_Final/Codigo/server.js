@@ -16,10 +16,9 @@ const pool = new Pool({
   database: process.env.DB_NAME,
 });
 
-// Ruta principal
-app.get('/', (req, res) => {
-  res.send('Hello from the backend!');
-});
+
+app.use(express.static('Codigo'));
+
 
 // Ruta para obtener la clave API
 app.get('/api-key', (req, res) => {

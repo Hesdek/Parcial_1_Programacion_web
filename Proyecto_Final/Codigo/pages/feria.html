@@ -20,59 +20,65 @@
         <a href="/pages/calendar.html">Calendario</a>
     </nav>
 
-    <h2>Feria de las Flores 2024 en Medellín</h2>
-    <p>La Feria de las Flores es uno de los eventos más importantes de Medellín, una celebración de la cultura, la música, y sobre todo, de las flores. Del 2 al 11 de agosto de 2024, Medellín se llena de color y vida con eventos para toda la familia.</p>
+    <section class="info-med">
+        <h2>Feria de las Flores 2024 en Medellín</h2>
+        <strong>La Feria de las Flores: Un Espectáculo Cultural y Tradicional de Medellín</strong>
+        <p>Feria de las Flores es mucho más que un simple evento; es una de las expresiones culturales más significativas de Medellín y un símbolo del orgullo paisa. Celebrada anualmente, esta feria transforma la ciudad en un escenario vibrante lleno de color, música, tradición y alegría. En 2024, del 2 al 11 de agosto, Medellín se vestirá de flores para rendir homenaje a sus raíces campesinas y al trabajo de los silleteros, quienes son el alma de esta celebración.</p> 
+        <p>Durante estos días, la ciudad se llena de actividades que destacan la rica cultura antioqueña, como el icónico <strong> Desfile de Silleteros</strong>, un evento declarado Patrimonio Cultural de la Nación, en el que campesinos llevan imponentes silletas cargadas de flores elaboradas con un arte y creatividad únicos. </p>
+        <p>Cada silleta cuenta una historia y es un homenaje a la naturaleza y a la tradición agrícola de la región. Además, la Feria incluye una amplia variedad de eventos para todas las edades y gustos. Desde conciertos de artistas nacionales e internacionales, exposiciones de flores en el Jardín Botánico, hasta desfiles de autos clásicos y antiguos, la agenda está llena de actividades que reúnen a miles de visitantes locales y extranjeros.<strong>¡La Feria de las Flores 2024 te espera con los brazos abiertos y un espectáculo inolvidable!</strong>
+        </p>
+            
+    </section>
 
     <section class="map-container">
-        <button onclick="toggleInfo('map1', 'medellin')">Mostrar Mapa de Medellín</button>
-        <button onclick="toggleInfo('map2', 'bogota')">Mostrar Mapa de Bogotá</button>
-        <button onclick="toggleInfo('map3', 'barranquilla')">Mostrar Mapa de Barranquilla</button>
-
-        <div id="map1" class="map" style="display: none;"></div>
+        <button onclick="toggleInfo('map2', 'bogota')">Mostrar Mapa de la feria de las flores</button>
         <div id="map2" class="map" style="display: none;"></div>
+    </section>
+
+    <section class="map-container">
+        <button onclick="toggleInfo('map3', 'barranquilla')">Mostrar Mapa de Barranquilla</button>
         <div id="map3" class="map" style="display: none;"></div>
     </section>
-    <div id="extraInfo" style="display: none;">
-        <h3>Fechas de la Feria de las Flores 2024</h3>
+
+    <section class="info-med">
+        <h2>Fechas de la Feria de las Flores 2024</h2>
         <p>Del 3 al 12 de agosto de 2024.</p>
-        <h3>Ubicación en el Mapa</h3>
-        <div id="map" style="width: 100%; height: 450px;"></div>
-    </div>
 
-    <h2>Eventos Destacados</h2>
+        <h2>Eventos Destacados</h2>
 
-    <h2><strong>Desfile de Silleteros</strong></h2>
-    <p>El evento más emblemático de la Feria de las Flores, donde los silleteros de Santa Elena muestran sus tradicionales y coloridas silletas en un desfile por la Avenida del Río.</p>
-    <strong>Fecha:</strong> 11 de agosto de 2024 <br>
-    <strong>Lugar:</strong> Avenida del Río, Medellín</p>
+        <h2>Desfile de Silleteros</h2>
+        <p>El evento más emblemático de la Feria de las Flores, donde los silleteros de Santa Elena muestran sus tradicionales y coloridas silletas en un desfile por la Avenida del Río.</p>
+        <strong>Fecha:</strong> 11 de agosto de 2024 <br>
+        <strong>Lugar:</strong> Avenida del Río, Medellín</p>
 
-    <h2><strong>Concierto de Apertura</strong></h2>
-    <p>Evento gratuito que inaugura la feria con presentaciones de artistas nacionales e internacionales en Plaza Mayor, brindando un espectáculo musical para todos</p>
-    <strong>Fecha:</strong> 2 de agosto de 2024 <br>
-    <strong>Lugar:</strong> Plaza Mayor, Medellín</p>
+        <h2>Concierto de Apertura</h2>
+        <p>Evento gratuito que inaugura la feria con presentaciones de artistas nacionales e internacionales en Plaza Mayor, brindando un espectáculo musical para todos</p>
+        <strong>Fecha:</strong> 2 de agosto de 2024 <br>
+        <strong>Lugar:</strong> Plaza Mayor, Medellín</p>
 
-    <h2><strong>Plaza de las Flores</strong></h2>
-    <p>Un espacio en el centro de Medellín con exposiciones de flores, talleres interactivos y actividades culturales, ideal para toda la familia.</p>
-    <strong>Duración:</strong> Del 2 al 11 de agosto de 2024 <br>
-    <strong>Lugar:</strong> Centro de Medellín</p>
+        <h2>Plaza de las Flores</h2>
+        <p>Un espacio en el centro de Medellín con exposiciones de flores, talleres interactivos y actividades culturales, ideal para toda la familia.</p>
+        <strong>Duración:</strong> Del 2 al 11 de agosto de 2024 <br>
+        <strong>Lugar:</strong> Centro de Medellín</p>
 
-    <h2><strong>Festival Nacional de la Trova</strong></h2>
-    <p>Competencia de trova tradicional con la final el 10 de agosto, destacando la creatividad y el talento de trovadores en el Teatro Metropolitano. </p>
-    <strong>Fecha Final:</strong> 10 de agosto de 2024 <br>
-    <strong>Lugar:</strong> Teatro Metropolitano</p>
+        <h2>Festival Nacional de la Trova</h2>
+        <p>Competencia de trova tradicional con la final el 10 de agosto, destacando la creatividad y el talento de trovadores en el Teatro Metropolitano. </p>
+        <strong>Fecha Final:</strong> 10 de agosto de 2024 <br>
+        <strong>Lugar:</strong> Teatro Metropolitano</p>
 
-    <h2><strong>Exposición de Orquídeas, Flores y Artesanías</strong></h2>
-    <p>Exhibición en el Jardín Botánico, donde se muestra una amplia variedad de orquídeas y artesanías, promoviendo la flora local y la cultura.</p>
-    <strong>Duración:</strong> Del 3 al 9 de agosto de 2024 <br>
-    <strong>Lugar:</strong> Jardín Botánico de Medellín</p>
+        <h2>Exposición de Orquídeas, Flores y Artesanías</h2>
+        <p>Exhibición en el Jardín Botánico, donde se muestra una amplia variedad de orquídeas y artesanías, promoviendo la flora local y la cultura.</p>
+        <strong>Duración:</strong> Del 3 al 9 de agosto de 2024 <br>
+        <strong>Lugar:</strong> Jardín Botánico de Medellín</p>
 
-    
+    </section>
+
     <footer>
         <p>&copy; 2024 Guía de Eventos Culturales de Medellín | Todos los derechos reservados</p>
     </footer>
 
     <script src="/resources/events.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY_GOOGLE_MAPS&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"></script>
 
 </body>
 </html>
