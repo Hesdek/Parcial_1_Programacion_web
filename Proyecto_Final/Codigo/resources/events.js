@@ -3,19 +3,19 @@ const locations = {
         lat: 6.2442, 
         lng: -75.5812, 
         title: "Medellín, Colombia",
-        zoom: 12
+        zoom: 10
     },
     feria: { 
-        lat: 4.7110, 
-        lng: -74.0721, 
-        title: "Bogotá, Colombia",
-        zoom: 18  
+        lat: 6.2858383, 
+        lng: -75.5675617, 
+        title: "Av. Del Río",
+        zoom: 15
     },
-    barranquilla: { 
+    tango: { 
         lat: 10.9685, 
         lng: -74.7813, 
         title: "Barranquilla, Colombia",
-        zoom: 14 
+        zoom: 14
     }
 };
 
@@ -24,7 +24,7 @@ const locations = {
 function initMap(mapId, locationKey) {
     const location = locations[locationKey];
     const map = new google.maps.Map(document.getElementById(mapId), {
-        zoom: 10,
+        zoom: location.zoom,  // Usamos el zoom específico de cada ciudad
         center: location,
     });
 
@@ -34,6 +34,7 @@ function initMap(mapId, locationKey) {
         title: location.title,
     });
 }
+
 
 // Función para mostrar y cargar un mapa
 function toggleInfo(mapId, locationKey) {

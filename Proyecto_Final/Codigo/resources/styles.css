@@ -53,6 +53,11 @@ h1, h2 {
     color: #008080;
 }
 
+h3 {
+    font-size: 30px;
+    color: #008080; 
+}
+
 .container {
     display: flex;
     justify-content: space-around;
