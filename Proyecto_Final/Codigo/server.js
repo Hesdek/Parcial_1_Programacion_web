@@ -1,9 +1,17 @@
 import express from 'express';
-import { Pool } from 'pg';
+import pkg from 'pg';  // Importación por defecto
 import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import path from 'path';  // Importación correcta de path
+
+const { Pool } = pkg; // Extraemos la clase Pool de pkg
 
 dotenv.config(); // Cargar las variables de entorno
 
+// Obtiene el directorio actual
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -20,11 +28,21 @@ const pool = new Pool({
 app.use(express.json());
 app.use(express.static('Codigo'));
 
+// Configuración para servir archivos estáticos desde las carpetas 'pages' y 'resources'
+app.use('/pages', express.static(path.join(__dirname, 'pages')));
+app.use('/resources', express.static(path.join(__dirname, 'resources')));
+
+
 // Validar configuración
 if (!process.env.DB_HOST || !process.env.DB_PORT || !process.env.DB_USER || !process.env.DB_PASSWORD || !process.env.DB_NAME) {
   console.error('Error: Missing required environment variables');
   process.exit(1);
 }
+
+// Servir el archivo index.html cuando se accede a la raíz
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html')); // Aquí se usa path.join correctamente
+});
 
 // Ruta para obtener la clave API
 app.get('/api-key', (req, res) => {
