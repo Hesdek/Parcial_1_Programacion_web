@@ -26,11 +26,14 @@ const pool = new Pool({
 
 // Middleware para json
 app.use(express.json());
-app.use(express.static('Codigo'));
 
-// Configuración para servir archivos estáticos desde las carpetas 'pages' y 'resources'
+// Servir archivos estáticos desde 'pages' y 'resources'
 app.use('/pages', express.static(path.join(__dirname, 'pages')));
 app.use('/resources', express.static(path.join(__dirname, 'resources')));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'pages', 'index.html')); // Ruta si index.html está en 'pages'
+});
 
 
 // Validar configuración
@@ -38,11 +41,6 @@ if (!process.env.DB_HOST || !process.env.DB_PORT || !process.env.DB_USER || !pro
   console.error('Error: Missing required environment variables');
   process.exit(1);
 }
-
-// Servir el archivo index.html cuando se accede a la raíz
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html')); // Aquí se usa path.join correctamente
-});
 
 // Ruta para obtener la clave API
 app.get('/api-key', (req, res) => {

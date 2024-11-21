@@ -29,3 +29,28 @@ function toggleInfo(mapId, locationKey) {
         mapContainer.style.display = "none";
     }
 }
+
+// Función para cargar el script de Google Maps dinámicamente
+async function loadGoogleMapsAPI() {
+    try {
+      // Obtener la API Key desde el servidor
+      const response = await fetch('/api-key');
+      const data = await response.json();
+  
+      if (data.apiKey) {
+        const script = document.createElement('script');
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${data.apiKey}&callback=initMap`;
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script); 
+      } else {
+        console.error('API Key not found in server response');
+      }
+    } catch (error) {
+      console.error('Error loading Google Maps API:', error);
+    }
+  }
+
+  
+  // Llamar a la función para cargar el script
+loadGoogleMapsAPI();
