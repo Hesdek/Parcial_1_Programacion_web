@@ -32,7 +32,7 @@ app.use('/pages', express.static(path.join(__dirname, 'pages')));
 app.use('/resources', express.static(path.join(__dirname, 'resources')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'pages', 'index.html')); // Ruta si index.html está en 'pages'
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 

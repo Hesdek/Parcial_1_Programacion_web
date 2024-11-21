@@ -1,8 +1,24 @@
 const locations = {
-    medellin: { lat: 6.2442, lng: -75.5812, title: "Medellín, Colombia" },
-    bogota: { lat: 4.7110, lng: -74.0721, title: "Bogotá, Colombia" },
-    barranquilla: { lat: 10.9685, lng: -74.7813, title: "Barranquilla, Colombia" }
+    medellin: { 
+        lat: 6.2442, 
+        lng: -75.5812, 
+        title: "Medellín, Colombia",
+        zoom: 12
+    },
+    feria: { 
+        lat: 4.7110, 
+        lng: -74.0721, 
+        title: "Bogotá, Colombia",
+        zoom: 18  
+    },
+    barranquilla: { 
+        lat: 10.9685, 
+        lng: -74.7813, 
+        title: "Barranquilla, Colombia",
+        zoom: 14 
+    }
 };
+
 
 // Función para inicializar un mapa específico
 function initMap(mapId, locationKey) {
