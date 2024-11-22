@@ -6,15 +6,16 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_NAME}
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - pg_data:/var/lib/postgresql/data
     env_file:
       - ./.env
 
-  
   app:
-    build: ./api
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
     container_name: my_app
     depends_on:
       - db
@@ -27,5 +28,10 @@ services:
       API_KEY: ${API_KEY}
     ports:
       - "3000:3000"
+    #volumes:
+     # - .:/app
     env_file:
       - ./.env
+
+volumes:
+  pg_data:
