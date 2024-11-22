@@ -154,6 +154,20 @@ footer {
     color: #ccc;
 }
 
+.highlight-red {
+    background-color: #ff0000;
+    color: white;
+}
+
+.highlight-blue {
+    background-color: #004085;
+    color: white;
+}
+
+.highlight-green {
+    background-color:  #155724;
+    color: white;
+}
 
 
 
