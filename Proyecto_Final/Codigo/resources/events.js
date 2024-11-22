@@ -11,10 +11,10 @@ const locations = {
         title: "Av. Del Río",
         zoom: 15
     },
-    tango: { 
-        lat: 10.9685, 
-        lng: -74.7813, 
-        title: "Barranquilla, Colombia",
+    plaza: { 
+        lat: 6.2408444, 
+        lng: -75.5774182, 
+        title: "Plaza mayor",
         zoom: 14
     }
 };
