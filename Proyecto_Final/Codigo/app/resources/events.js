@@ -20,25 +20,38 @@ const locations = {
 };
 
 
-// Función para inicializar un mapa específico
+const initializedMaps = {}; // Rastrear mapas inicializados
+
 function initMap(mapId, locationKey) {
     const location = locations[locationKey];
-    const map = new google.maps.Map(document.getElementById(mapId), {
-        zoom: location.zoom,  // Usamos el zoom específico de cada ciudad
+    const mapContainer = document.getElementById(mapId);
+
+    // Limpia el mapa anterior si ya existe
+    if (initializedMaps[mapId]) {
+        mapContainer.innerHTML = ''; // Elimina cualquier elemento del DOM previo
+    }
+
+    // Inicializa el mapa
+    const map = new google.maps.Map(mapContainer, {
+        zoom: location.zoom,
         center: location,
     });
 
+    // Agrega un marcador
     new google.maps.Marker({
         position: location,
         map: map,
         title: location.title,
     });
+
+    // Marca el mapa como inicializado
+    initializedMaps[mapId] = true;
 }
 
-
-// Función para mostrar y cargar un mapa
 function toggleInfo(mapId, locationKey) {
     const mapContainer = document.getElementById(mapId);
+
+    // Mostrar el mapa si está oculto
     if (mapContainer.style.display === "none") {
         mapContainer.style.display = "block";
         initMap(mapId, locationKey);
@@ -46,6 +59,7 @@ function toggleInfo(mapId, locationKey) {
         mapContainer.style.display = "none";
     }
 }
+
 
 // Función para cargar el script de Google Maps dinámicamente
 async function loadGoogleMapsAPI() {

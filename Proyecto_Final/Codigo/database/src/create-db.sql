@@ -3,7 +3,7 @@ BEGIN TRANSACTION;
 CREATE TABLE Users (
     id_user INT PRIMARY KEY,
     names VARCHAR(100) NOT NULL,
-    passwords VARCHAR(255) NOT NULL,  -- Asegúrate de almacenar el hash, no el texto plano
+    passwords VARCHAR(255) NOT NULL,
     is_admin BOOLEAN DEFAULT FALSE
 );
 
