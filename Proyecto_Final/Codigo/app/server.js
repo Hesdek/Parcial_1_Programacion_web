@@ -4,6 +4,9 @@ import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import path from 'path';  // Importación correcta de path
+import EventRoutes from './api/routes/EventRoutes.js';
+import UserRoutes from './api/routes/UserRoutes.js';
+
 
 const { Pool } = pkg; // Extraemos la clase Pool de pkg
 
@@ -38,7 +41,8 @@ app.use(express.json());
 // Servir archivos estáticos desde 'pages' y 'resources'
 app.use('/resources', express.static(path.join(__dirname, 'resources')));
 app.use('/pages', express.static(path.join(__dirname, 'pages')));
-
+app.use('/api/events', EventRoutes);
+app.use('/api/users', UserRoutes); 
 
 // Ruta principal para el index.html
 app.get('/', (req, res) => {
